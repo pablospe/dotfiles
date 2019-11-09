@@ -54,7 +54,7 @@ Plug 'haya14busa/incsearch-fuzzy.vim'
 
 "Plug 'christoomey/vim-tmux-navigator'
 
-
+Plug 'zxqfl/tabnine-vim'
 
 
 " Invasive
