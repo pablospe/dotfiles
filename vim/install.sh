@@ -11,7 +11,7 @@ FILES='.vimrc .vim'
 
 # Create backup
 echo Create backup
-PATH_BACKUP=~/backup_new/
+PATH_BACKUP=~/backup/
 echo mkdir -p $PATH_BACKUP
 mkdir -p $PATH_BACKUP
 
