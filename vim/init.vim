@@ -2,6 +2,8 @@ source ~/.vim/plugins.vim
 
 let mapleader = "\<space>"
 
+set encoding=UTF-8
+
 syntax on
 colorscheme gruvbox
 
