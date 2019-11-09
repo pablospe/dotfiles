@@ -1,10 +1,5 @@
-# sudo apt install bash-completion
-
-git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
-
-
 #
-# https://maximomussini.com/posts/bash-git-prompt/
+# https://github.com/pablospe/bash-git-prompt.git
 #
 if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
 	# Set config variables first
@@ -28,13 +23,7 @@ if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
 	# GIT_PROMPT_THEME=Custom # use custom theme specified in file GIT_PROMPT_THEME_FILE (default ~/.git-prompt-colors.sh)
 	# GIT_PROMPT_THEME_FILE=~/.git-prompt-colors.sh
 	# GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
-	GIT_PROMPT_THEME=Single_line_username_repo # use theme optimized for solarized color scheme
+	GIT_PROMPT_THEME=Pablo
+
 	source $HOME/.bash-git-prompt/gitprompt.sh
 fi
-
-
-#
-# unify bash history
-#
-shopt -s histappend
-PROMPT_COMMAND="history -a;history -c;history -r;$PROMPT_COMMAND"

@@ -1,0 +1,14 @@
+Iconic font aggregator, collection, & patcher. 3,600+ icons, 40+ patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, & more https://NerdFonts.com
+
+Link: https://github.com/ryanoasis/nerd-fonts
+
+
+Installation
+
+    https://github.com/ryanoasis/nerd-fonts#option-3-install-script
+
+    > git clone --depth 1  https://github.com/ryanoasis/nerd-fonts.git /tmp/nerd-fonts
+    > cd /tmp/nerd-fonts
+    > sudo ./install.sh Hack
+    > sudo ./install.sh FiraCode
+
