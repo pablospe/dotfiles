@@ -29,25 +29,29 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
+#
+# Example:
+# > ./shrinkpdf.sh file.pdf file_compressed.pdf 300
+#
 
 shrink ()
 {
-	gs					\
-	  -q -dNOPAUSE -dBATCH -dSAFER		\
-	  -sDEVICE=pdfwrite			\
-	  -dCompatibilityLevel=1.3		\
-	  -dPDFSETTINGS=/screen			\
-	  -dEmbedAllFonts=true			\
-	  -dSubsetFonts=true			\
-	  -dAutoRotatePages=/None		\
-	  -dColorImageDownsampleType=/Bicubic	\
-	  -dColorImageResolution=$3		\
-	  -dGrayImageDownsampleType=/Bicubic	\
-	  -dGrayImageResolution=$3		\
-	  -dMonoImageDownsampleType=/Bicubic	\
-	  -dMonoImageResolution=$3		\
-	  -sOutputFile="$2"			\
-	  "$1"
+  gs \
+    -q -dNOPAUSE -dBATCH -dSAFER \
+    -sDEVICE=pdfwrite            \
+    -dCompatibilityLevel=1.5     \
+    -dPDFSETTINGS=/screen        \
+    -dEmbedAllFonts=true         \
+    -dSubsetFonts=true           \
+    -dAutoRotatePages=/None      \
+    -dColorImageDownsampleType=/Bicubic \
+    -dColorImageResolution=$3           \
+    -dGrayImageDownsampleType=/Bicubic  \
+    -dGrayImageResolution=$3            \
+    -dMonoImageDownsampleType=/Bicubic  \
+    -dMonoImageResolution=$3            \
+    -sOutputFile="$2"                   \
+    "$1"
 }
 
 check_smaller ()
