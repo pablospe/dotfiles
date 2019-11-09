@@ -1,0 +1,9 @@
+Downloads/*
+.cache/*
+.local/*
+VirtualBox/*
+wrk/*
+build/*
+data/*
+backup/*
+
