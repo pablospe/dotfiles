@@ -1,0 +1,21 @@
+startup_message off
+
+shell                 zsh
+#shell                 bash
+
+bindkey -k F1 prev  # F11 = C-a p
+bindkey -k F2 next  # F12 = C-a n
+
+# Run everything in UTF-8.
+defutf8 on
+
+# If a window goes unresponsive, don't block the whole session waiting for it.
+nonblock on
+
+
+caption always "%{rk}%H %{wk}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{wk}%?%+Lw%? %{gk}%=%c %{yk}%d/%M/%Y"
+#caption always "%>%{wk}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{wk}%?%+Lw%?%<"
+#caption always "%{= kw}%?%-Lw%?%{+b kw}%n*%t%f %?(%u)%?%{= kw}%?%+Lw%?"
+
+#hardstatus alwayslastline "[%D, %d/%m/%y %C %a]  %-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+#hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
