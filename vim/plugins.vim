@@ -30,8 +30,6 @@ Plug 'scrooloose/nerdcommenter'
 " NerdTree with git status
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-"Plug 'terryma/vim-multiple-cursors'
-
 Plug 'easymotion/vim-easymotion'
 
 "Plug 'yuttie/comfortable-motion.vim'
@@ -70,13 +68,14 @@ Plug 'zefei/vim-wintabs'
 
 "Plug 'svermeulen/vim-easyclip'
 
-"Plug 'svermeulen/vim-easyclip'
-
 " Highlight your yank aera
 Plug 'machakann/vim-highlightedyank'
 
 " Highlight current work
 Plug 'dominikduda/vim_current_word'
+
+" Ctrl+N for multiple cursors (Ctrl+X for skip)"
+" Plug 'terryma/vim-multiple-cursors'
 
 
 " Initialize plugin system
