@@ -171,7 +171,23 @@ nmap  <Leader>c<Space>
 imap  <ESC><Leader>c<Space>a
 vmap  <Leader>c<Space>gv
 
-" 
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not
+let g:NERDToggleCheckAllLines = 1
+
+
+"
 " https://superuser.com/questions/1190190/switch-colorscheme-in-terminal-vim-and-tmux-front-dark-to-light-with-one-comman
 "
 function! Solar_swap()
