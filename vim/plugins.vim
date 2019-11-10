@@ -48,9 +48,9 @@ Plug 'vim-scripts/restore_view.vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/incsearch-fuzzy.vim'
 
-
-"Plug 'christoomey/vim-tmux-navigator'
-
+" tmux: seamless navigation between tmux panes and vim splits
+Plug 'christoomey/vim-tmux-navigator'
+"
 Plug 'zxqfl/tabnine-vim'
 
 
