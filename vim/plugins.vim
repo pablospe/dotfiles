@@ -73,6 +73,9 @@ Plug 'zefei/vim-wintabs'
 
 "Plug 'svermeulen/vim-easyclip'
 
+" Highlight your yank aera
+Plug 'machakann/vim-highlightedyank'
+
 
 
 " Initialize plugin system
