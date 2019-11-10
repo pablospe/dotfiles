@@ -81,7 +81,7 @@ endif
 
 " Files + devicons
 function! Fzf_dev()
-  let l:fzf_files_options = '--preview "bat --theme="monokai" --style=numbers,changes --color always {2..-1} | head -'.&lines.'"'
+  let l:fzf_files_options = '--preview "bat --style=numbers,changes --color always {2..-1} | head -'.&lines.'"'
 
   function! s:files()
     let l:files = split(system($FZF_DEFAULT_COMMAND), '\n')
