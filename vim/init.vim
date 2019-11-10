@@ -4,6 +4,14 @@ let mapleader = "\<space>"
 
 set encoding=UTF-8
 
+" clipboard
+" vim --version | grep .xterm_clipboard -o
+" (otherwise install: "sudo apt install vim-gnome")
+set clipboard=unnamedplus
+
+" mouse
+set mouse=a
+
 syntax on
 colorscheme gruvbox
 
