@@ -19,6 +19,7 @@ Plug 'ryanoasis/vim-devicons'
 
 " Color scheme
 Plug 'morhetz/gruvbox'
+Plug 'altercation/vim-colors-solarized'
 
 " Airline
 Plug 'vim-airline/vim-airline'

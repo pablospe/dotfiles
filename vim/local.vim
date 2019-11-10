@@ -190,16 +190,21 @@ let g:NERDToggleCheckAllLines = 1
 "
 " https://superuser.com/questions/1190190/switch-colorscheme-in-terminal-vim-and-tmux-front-dark-to-light-with-one-comman
 "
-function! Solar_swap()
+function! Color_scheme_swap()
     if &background ==? 'dark'
+        let g:solarized_termcolors=256
+        colorscheme solarized
         set background=light
-        execute "silent !tmux source-file " . shellescape(expand('~/tmux-colors-solarized/tmuxcolors-light.conf'))
+        " execute "silent !tmux source-file " . shellescape(expand('~/tmux-colors-solarized/tmuxcolors-light.conf'))
     else
+        colorscheme gruvbox
         set background=dark
-        execute "silent !tmux source-file " . shellescape(expand('~/tmux-colors-solarized/tmuxcolors-dark.conf'))
+        " execute "silent !tmux source-file " . shellescape(expand('~/tmux-colors-solarized/tmuxcolors-dark.conf'))
     endif
-    silent !osascript -e 'tell app "System Events" to keystroke "s" using {shift down, option down, control down}'
+    " silent !osascript -e 'tell app "System Events" to keystroke "s" using {shift down, option down, control down}'
 endfunction
 
-command! SolarSwap call Solar_swap()
+command! ColorSchemeSwap call Color_scheme_swap()
+nnoremap <silent> <Leader>i :ColorSchemeSwap<CR>
+vnoremap <silent> <Leader>i <ESC>:ColorSchemeSwap<CR>gv
 
