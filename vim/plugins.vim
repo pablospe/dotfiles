@@ -30,8 +30,6 @@ Plug 'scrooloose/nerdcommenter'
 " NerdTree with git status
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-Plug 'dominikduda/vim_current_word'
-
 "Plug 'terryma/vim-multiple-cursors'
 
 Plug 'easymotion/vim-easymotion'
@@ -77,6 +75,8 @@ Plug 'zefei/vim-wintabs'
 " Highlight your yank aera
 Plug 'machakann/vim-highlightedyank'
 
+" Highlight current work
+Plug 'dominikduda/vim_current_word'
 
 
 " Initialize plugin system

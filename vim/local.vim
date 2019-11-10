@@ -195,10 +195,14 @@ function! Color_scheme_swap()
         let g:solarized_termcolors=256
         colorscheme solarized
         set background=light
+        hi CurrentWord ctermbg=155
+        hi CurrentWordTwins ctermbg=150
         " execute "silent !tmux source-file " . shellescape(expand('~/tmux-colors-solarized/tmuxcolors-light.conf'))
     else
         colorscheme gruvbox
         set background=dark
+        hi CurrentWord ctermbg=53
+        hi CurrentWordTwins ctermbg=237
         " execute "silent !tmux source-file " . shellescape(expand('~/tmux-colors-solarized/tmuxcolors-dark.conf'))
     endif
     " silent !osascript -e 'tell app "System Events" to keystroke "s" using {shift down, option down, control down}'
