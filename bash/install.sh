@@ -48,7 +48,7 @@ wget https://raw.githubusercontent.com/wfxr/forgit/master/forgit.plugin.zsh
 cp forgit.plugin.zsh $HOME/.bash/
 echo '' >>~/.bashrc
 echo '# forgit (fzf for git)' >>~/.bashrc
-echo 'source $HOME/.bash/forgit.plugin.sh' >> $HOME/.bashrc
+echo 'source $HOME/.bash/forgit.plugin.zsh' >> $HOME/.bashrc
 
 #
 # bash-git-prompt
