@@ -1,5 +1,17 @@
 [user]
 	email = pablo.speciale@gmail.com
 	name = Pablo Speciale
+
 [push]
 	default = simple
+
+[core]
+	editor = vim
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+
+[alias]
+	patch = !git --no-pager diff --no-color
