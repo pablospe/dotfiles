@@ -32,7 +32,7 @@ set-option -g status-style fg=$base02,bg=$base00,default
 # set-window-option -g window-status-current-format " #[bold]#W"
 
 # pane border colors
-set-window-option -g pane-active-border-style fg=$base0C
+set-window-option -g pane-active-border-style fg=$base0A
 set-window-option -g pane-border-style fg=$base03
 
 # message text
