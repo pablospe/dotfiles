@@ -4,6 +4,7 @@
 # https://github.com/so-fancy/diff-so-fancy
 #
 wget https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy
+chmod +x diff-so-fancy
 cp diff-so-fancy ~/bin
 
 # git config --global core.pager "diff-so-fancy | less --tabs=4 -RFXS --pattern '^(Date|added|deleted|modified): '"
