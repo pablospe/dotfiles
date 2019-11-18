@@ -212,3 +212,6 @@ command! ColorSchemeSwap call Color_scheme_swap()
 nnoremap <silent> <Leader>i :ColorSchemeSwap<CR>
 vnoremap <silent> <Leader>i <ESC>:ColorSchemeSwap<CR>gv
 
+" FlyGrep
+nnoremap <Leader>s/ :FlyGrep<cr>
+
