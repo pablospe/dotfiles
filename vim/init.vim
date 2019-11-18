@@ -39,6 +39,9 @@ nmap <Leader>\ :vsplit<CR>
 imap kk <ESC>k
 imap jj <ESC>j
 
+" Go from one buffer to another without needing to save first
+set hidden
+
 let g:vim_current_word#highlight_delay = 0
 hi CurrentWord ctermbg=53
 hi CurrentWordTwins ctermbg=237
