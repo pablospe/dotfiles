@@ -34,7 +34,7 @@ nmap <Leader>q :q<CR>
 nmap <Leader>! :q!<CR>
 nmap <C-s> :w<CR>
 imap <C-s> <ESC>:w<CR>
-nmap <Leader>r :so ~/.vimrc<CR>
+nmap <Leader>r :Rg <UP>
 nmap <Leader>\ :vsplit<CR>
 
 "nmap <C-h> viw
