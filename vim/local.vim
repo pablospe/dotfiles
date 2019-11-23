@@ -69,15 +69,16 @@ inoremap <silent> <F10> <ESC>:set wrap!<CR>a
 nnoremap <silent> <CR> a<CR>
 
 " BackSpace: enter to insert mode
-nmap <BS> i<BS>
+noremap <BS> i<BS>
+vnoremap <BS> x<ESC>
 
 " Ctrl+S: saves the content
-map <C-S> <Esc>:w <CR>
-imap <C-S> <Esc>:w <CR>a
+noremap <C-S> <Esc>:w <CR>
+inoremap <C-S> <Esc>:w <CR>a
 
 " Ctrl+Q: quit
-"noremap <C-Q> <Esc>:q <CR>
-"inoremap <C-Q> <Esc>:q <CR>
+noremap <C-Q> <Esc>:q <CR>
+inoremap <C-Q> <Esc>:q <CR>
 
 " Undo
 map <C-z> u
