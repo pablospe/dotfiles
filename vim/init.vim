@@ -108,13 +108,20 @@ map  <Leader>n  :NERDTreeFind<CR>   " Find the location of current file
 " Wintabs
 "map <C-H> <Plug>(wintabs_previous)
 "map <C-L> <Plug>(wintabs_next)
-"noremap <C-[> <Plug>(wintabs_previous)
-"noremap <C-]> <Plug>(wintabs_next)
-map <C-T>c <Plug>(wintabs_close)
-map <C-T>u <Plug>(wintabs_undo)
-map <C-T>o <Plug>(wintabs_only)
-map <C-W>c <Plug>(wintabs_close_window)
-map <C-W>o <Plug>(wintabs_only_window)
+" noremap <C-[> <Plug>(wintabs_previous)
+" noremap <C-]> <Plug>(wintabs_next)
+" map <C-T>c <Plug>(wintabs_close)
+" map <C-T>u <Plug>(wintabs_undo)
+" map <C-T>o <Plug>(wintabs_only)
+map <C-W>c <Plug>(wintabs_close)
+map <C-W>u <Plug>(wintabs_undo)
+map <C-W>o <Plug>(wintabs_only)
+
+map <C-W>h <Plug>(wintabs_previous)
+map <C-W>l <Plug>(wintabs_next)
+map <C-W><C-H> <Plug>(wintabs_previous)
+map <C-W><C-L> <Plug>(wintabs_next)
+
 command! Tabc WintabsCloseVimtab
 command! Tabo WintabsOnlyVimtab
 
