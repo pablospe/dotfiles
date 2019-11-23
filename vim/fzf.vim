@@ -5,6 +5,9 @@ let g:fzf_layout = { 'down': '~30%' }
 " View fzf buffers
 nnoremap <Leader>b :Buffers<cr>
 
+" ripgrep
+nmap <Leader>r :Rg <UP>
+
 "
 " FZF config
 "
