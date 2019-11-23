@@ -79,6 +79,8 @@ Plug 'dominikduda/vim_current_word'
 
 Plug 'fisadev/dragvisuals.vim'
 
+" Plug 'psliwka/vim-smoothie'
+
 " Initialize plugin system
 call plug#end()
 
