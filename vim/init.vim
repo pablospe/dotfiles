@@ -66,6 +66,8 @@ let g:multi_cursor_exit_from_insert_mode=1
 "let g:comfortable_motion_air_drag = 4.0
 
 " vim-better-whitespace
+" Trim whitespaces when save (only on modified lines)
+" Use :StripWhitespace for full file
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_confirm=0
 let g:strip_whitespace_on_save=1

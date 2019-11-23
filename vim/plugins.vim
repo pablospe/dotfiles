@@ -34,7 +34,7 @@ Plug 'easymotion/vim-easymotion'
 
 "Plug 'yuttie/comfortable-motion.vim'
 
-"Plug 'ntpeters/vim-better-whitespace'
+Plug 'ntpeters/vim-better-whitespace'
 
 "Plug 'tpope/vim-repeat'
 
