@@ -24,7 +24,7 @@ done
 echo ""
 echo Create symbolic links
 echo ln -s $PWD ~/.vim
-ln -s $PWD ~/.vim
+[ -f ~/.vim ] &&  ln -s $PWD ~/.vim
 
 echo ln -s ~/.vim/.vimrc ~/.vimrc
 ln -s ~/.vim/.vimrc ~/.vimrc
