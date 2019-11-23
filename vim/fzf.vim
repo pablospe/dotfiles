@@ -7,6 +7,7 @@ nnoremap <Leader>b :Buffers<cr>
 
 " ripgrep
 nmap <Leader>r :Rg <UP>
+nmap <Leader>R :Rg <C-r><C-w><CR>
 
 "
 " FZF config
