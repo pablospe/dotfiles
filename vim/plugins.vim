@@ -53,8 +53,6 @@ Plug 'christoomey/vim-tmux-navigator'
 "
 Plug 'zxqfl/tabnine-vim'
 
-" Grep: <Leader>s/
-Plug 'wsdjeg/FlyGrep.vim'
 
 " Invasive
 ""
