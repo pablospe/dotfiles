@@ -79,6 +79,7 @@ Plug 'dominikduda/vim_current_word'
 " Ctrl+N for multiple cursors (Ctrl+X for skip)"
 " Plug 'terryma/vim-multiple-cursors'
 
+Plug 'fisadev/dragvisuals.vim'
 
 " Initialize plugin system
 call plug#end()
