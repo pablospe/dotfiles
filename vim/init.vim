@@ -12,6 +12,10 @@ set clipboard=unnamedplus
 " mouse
 set mouse=a
 
+" common directory for swap files
+set directory=$HOME/.vim/swapfiles//
+set backupdir=$HOME/.vim/swapfiles//
+
 syntax on
 colorscheme gruvbox
 

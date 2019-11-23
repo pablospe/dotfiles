@@ -30,6 +30,11 @@ echo ln -s ~/.vim/.vimrc ~/.vimrc
 ln -s ~/.vim/.vimrc ~/.vimrc
 
 echo ""
+echo Create temporary directory
+echo mkdir -p $HOME/.vim/swapfiles
+mkdir -p $HOME/.vim/swapfiles
+
+echo ""
 echo Installing vimplug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
