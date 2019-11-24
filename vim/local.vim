@@ -138,11 +138,23 @@ nnoremap <silent> <F11> :call NumberToggle()<CR>
 inoremap <silent> <F11> <ESC>:call NumberToggle()<CR>i
 
 
+" set colorcolumn=80
+let &colorcolumn = join(range(81,999), ',')
+
 " Highlight current line
 set cursorline
-:hi CursorLine   cterm=NONE ctermbg=237 ctermfg=none
-autocmd WinEnter * setlocal cursorline relativenumber
-autocmd WinLeave * setlocal nocursorline norelativenumber
+hi CursorLine cterm=NONE ctermbg=237 ctermfg=none
+hi CursorLineNr ctermbg=53
+
+autocmd WinEnter * setlocal relativenumber
+autocmd WinEnter *
+  \ let &colorcolumn = join(range(81,999), ',')
+autocmd WinLeave *  setlocal norelativenumber colorcolumn=0
+
+" fade inactive windows
+let g:vimade = {}
+let g:vimade.fadelevel = 0.5
+let g:vimade.enablesigns = 1
 
 
 " Quote a word consisting of letters from iskeyword.
@@ -204,6 +216,7 @@ function! Color_scheme_swap()
         set background=dark
         hi CurrentWord ctermbg=53
         hi CurrentWordTwins ctermbg=237
+        hi CursorLineNr ctermbg=53
         " execute "silent !tmux source-file " . shellescape(expand('~/tmux-colors-solarized/tmuxcolors-dark.conf'))
     endif
     " silent !osascript -e 'tell app "System Events" to keystroke "s" using {shift down, option down, control down}'

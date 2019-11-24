@@ -81,6 +81,8 @@ Plug 'fisadev/dragvisuals.vim'
 
 " Plug 'psliwka/vim-smoothie'
 
+Plug 'tadaa/vimade'
+
 " Initialize plugin system
 call plug#end()
 

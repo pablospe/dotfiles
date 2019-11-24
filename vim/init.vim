@@ -30,9 +30,6 @@ set background=dark " use dark mode
 "let a g:airline_theme='deus'
 "let g:airline_theme='bubblegum'
 
-" set colorcolumn=80
-let &colorcolumn = join(range(81,999), ',')
-
 nmap <Leader>o :NERDTreeToggle<CR>
 nmap <Leader>q :q<CR>
 nmap <Leader>! :q!<CR>
