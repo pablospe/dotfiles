@@ -152,9 +152,9 @@ autocmd WinEnter *
 autocmd WinLeave *  setlocal norelativenumber colorcolumn=0
 
 " fade inactive windows
-let g:vimade = {}
-let g:vimade.fadelevel = 0.5
-let g:vimade.enablesigns = 1
+" let g:vimade = {}
+" let g:vimade.fadelevel = 0.5
+" let g:vimade.enablesigns = 1
 
 
 " Quote a word consisting of letters from iskeyword.
