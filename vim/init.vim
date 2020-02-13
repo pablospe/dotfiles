@@ -49,7 +49,7 @@ let g:vim_current_word#highlight_delay = 0
 hi CurrentWord ctermbg=53
 hi CurrentWordTwins ctermbg=237
 autocmd BufAdd NERD_tree_*,your_buffer_name.rb,*.js :let b:vim_current_word_disabled_in_this_buffer = 1
-nmap <Leader>h :VimCurrentWordToggle<CR>
+noremap <Leader>h :set hlsearch! hlsearch?<CR>
 
 let g:multi_cursor_exit_from_visual_mode=1
 let g:multi_cursor_exit_from_insert_mode=1
