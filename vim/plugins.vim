@@ -57,6 +57,10 @@ Plug 'zxqfl/tabnine-vim'
 Plug 'jpalardy/vim-slime', { 'for': 'python' }
 Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 
+" Plugin to toggle, display and navigate marks
+Plug 'kshenoy/vim-signature'
+
+
 " Invasive
 ""
 "" Tabs
