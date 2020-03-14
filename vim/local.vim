@@ -80,6 +80,9 @@ inoremap <C-S> <Esc>:w <CR>a
 noremap <C-A> ggVG
 inoremap <C-A> <Esc>ggVG
 
+" Ctrl+C: copy using System Clipboard
+vnoremap <C-c> "+y<CR>
+
 " Ctrl+Q: quit
 noremap <C-Q> <Esc>:q <CR>
 inoremap <C-Q> <Esc>:q <CR>
