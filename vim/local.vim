@@ -76,6 +76,10 @@ vnoremap <BS> x<ESC>
 noremap <C-S> <Esc>:w <CR>
 inoremap <C-S> <Esc>:w <CR>a
 
+" Ctrl+A: select all
+noremap <C-A> ggVG
+inoremap <C-A> <Esc>ggVG
+
 " Ctrl+Q: quit
 noremap <C-Q> <Esc>:q <CR>
 inoremap <C-Q> <Esc>:q <CR>
@@ -238,6 +242,14 @@ let g:DVB_TrimWS = 1
 
 
 "------------------------------------------------------------------------------
+" vim-signature
+"------------------------------------------------------------------------------
+
+" map <Ctrl+PgUp> and <Ctrl+PgDown> to jump previous and next mark
+map <C-PageUp>   [`
+map <C-PageDown> ]`
+
+"------------------------------------------------------------------------------
 " slime configuration (needed for ipython-cell plugin)
 "------------------------------------------------------------------------------
 " always use tmux
@@ -298,3 +310,4 @@ autocmd FileType python inoremap OM <C-o>:IPythonCellExecuteCellJump<CR>
 " map Ctrl+Up and Ctrl+Down
 autocmd FileType python nnoremap [1;5A :IPythonCellPrevCell<CR>
 autocmd FileType python nnoremap [1;5B :IPythonCellNextCell<CR>
+
