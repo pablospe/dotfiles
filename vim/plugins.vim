@@ -53,6 +53,9 @@ Plug 'christoomey/vim-tmux-navigator'
 "
 Plug 'zxqfl/tabnine-vim'
 
+" Python
+Plug 'jpalardy/vim-slime', { 'for': 'python' }
+Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 
 " Invasive
 ""
