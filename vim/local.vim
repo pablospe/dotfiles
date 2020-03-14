@@ -94,10 +94,12 @@ vnoremap < <gv
 vnoremap > >gv
 
 " indent with Tab
-nnoremap <Tab> >>
+" nnoremap <Tab> >>
 nnoremap <S-Tab> <<"
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
+inoremap <S-Tab> <C-d>
+
 
 " Mappings to move lines.
 " nnoremap <silent><C-j> :m .+1<CR>==
