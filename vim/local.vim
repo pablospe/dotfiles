@@ -66,7 +66,7 @@ inoremap <silent> <F10> <ESC>:set wrap!<CR>a
 
 
 " ENTER: enter to insert mode
-nnoremap <silent> <CR> a<CR>
+" nnoremap <silent> <CR> a<CR>
 
 " BackSpace: enter to insert mode
 noremap <BS> i<BS>
