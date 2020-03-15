@@ -23,10 +23,13 @@ colorscheme gruvbox
 " colorscheme apprentice
 
 let g:airline_powerline_fonts = 1
-" let g:airline_theme='gruvbox'
 let g:airline_theme='bubblegum'
+" let g:airline_theme='gruvbox'
 " let g:airline_theme='onedark'
 " let g:airline_theme='deus'
+
+set background=dark    " use dark mode
+" set background=light " use light mode
 
 nmap <Leader>o :NERDTreeToggle<CR>
 nmap <Leader>q :q<CR>
