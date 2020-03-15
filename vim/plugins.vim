@@ -23,7 +23,7 @@ Plug 'altercation/vim-colors-solarized'
 
 " Airline
 Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline-themes'
 
 Plug 'scrooloose/nerdcommenter'
 
@@ -59,6 +59,9 @@ Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 
 " Plugin to toggle, display and navigate marks
 Plug 'kshenoy/vim-signature'
+
+" Collection of awesome color schemes for Vim
+Plug 'rafi/awesome-vim-colorschemes'
 
 
 " Invasive

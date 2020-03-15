@@ -18,17 +18,15 @@ set backupdir=$HOME/.vim/swapfiles//
 
 syntax on
 colorscheme gruvbox
+" colorscheme deus      " very similar to gruvbox
+" colorscheme onedark
+" colorscheme apprentice
 
 let g:airline_powerline_fonts = 1
-let g:airline_theme='gruvbox'
-set background=dark " use dark mode
-" set background=light " uncomment to use light mode
-"let as g:gruvbox_contrast_dark='soft'
-"let as g:gruvbox_contrast_dark='hard'
-"let as g:airline_theme='soda'
-"let as g:airline_theme='luna'
-"let a g:airline_theme='deus'
-"let g:airline_theme='bubblegum'
+" let g:airline_theme='gruvbox'
+let g:airline_theme='bubblegum'
+" let g:airline_theme='onedark'
+" let g:airline_theme='deus'
 
 nmap <Leader>o :NERDTreeToggle<CR>
 nmap <Leader>q :q<CR>
