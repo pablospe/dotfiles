@@ -306,7 +306,7 @@ autocmd FileType python nnoremap ]c :IPythonCellNextCell<CR>
 
 " map <Ctrl+Enter> to evaluate current cell without saving
 autocmd FileType python nnoremap  :IPythonCellExecuteCell<CR>
-autocmd FileType python inoremap  <C-o>:IPythonCellExecuteCell<CR>
+" autocmd FileType python inoremap  <C-o>:IPythonCellExecuteCell<CR>
 
 " map <Shitf+Enter> to evaluate current cell and jump to next one without saving
 autocmd FileType python nnoremap OM :IPythonCellExecuteCellJump<CR>
