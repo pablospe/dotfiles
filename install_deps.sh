@@ -23,5 +23,5 @@ sudo dpkg -i ripgrep_11.0.2_amd64.deb
 #
 # vim-gnome: +clipboard option
 #
-sudo apt install vim-gnome mc silversearcher-ag tmux dfc axel
+sudo apt install vim-gtk3 mc silversearcher-ag tmux dfc axel
 
