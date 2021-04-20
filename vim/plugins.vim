@@ -51,7 +51,7 @@ Plug 'haya14busa/incsearch-fuzzy.vim'
 " tmux: seamless navigation between tmux panes and vim splits
 Plug 'christoomey/vim-tmux-navigator'
 "
-Plug 'zxqfl/tabnine-vim'
+" Plug 'zxqfl/tabnine-vim'
 
 " Python
 Plug 'jpalardy/vim-slime', { 'for': 'python' }
