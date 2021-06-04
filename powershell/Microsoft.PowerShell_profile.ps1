@@ -85,3 +85,13 @@ Set-Alias -Name ll -Value ls
 #    > op file.py   (open `file.py` in the default editor)
 #
 New-Alias op explorer.exe
+
+
+#
+# Cemplete like bash (instead of first result)
+#
+# https://stackoverflow.com/questions/8264655/how-to-make-powershell-tab-completion-work-like-bash/37715242#37715242
+Set-PSReadlineKeyHandler -Key Tab -Function Complete
+
+# Disable PowerShell beep
+Set-PSReadlineOption -BellStyle None
