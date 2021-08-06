@@ -1,42 +1,26 @@
 ## Instalation
 
-Install some other applications that allow ranger to preview various file formats effectively
+Run install script:
 
-    sudo apt-get install ranger caca-utils highlight atool w3m poppler-utils mediainfo ffmpegthumbnailer
+    ./install.sh
 
-Now ranger has created its configuration directory and we can copy its configuration files with the following command:
-
-    # copy range configuration
-    cp rc.conf ~/.config/ranger
-
-    # apply patch for previews
-    ranger --copy-config=scope
-    patch ~/.config/ranger/scope.sh < scope.sh.path
-
-For ubuntu 18.03 (and older), install a newer version:
+For ubuntu 18.03 (and older), install a newer version (>v1.9.0):
 
     wget https://ubuntu.pkgs.org/20.04/ubuntu-universe-amd64/ranger_1.9.3-1build1_all.deb.html
     sudo dpkg -i ranger_1.9.3-1build1_all.deb
 
-Alternately, use the package manager of your operating system to install ranger. You can also install ranger through PyPI: `pip install ranger-fm`
+Alternately, use the package manager of your operating system to install ranger. You can also install ranger through PyPI: `pip install ranger-fm`. But `apt` is recommended.
 
 ## Preview formats
 
 * Images: https://github.com/ranger/ranger/wiki/Image-Previews
-    - Try with w3mimgdisplay. You might need to create a symbolic link:
+    - Try with `w3mimgdisplay` (working). You might need to create a symbolic link:
 
       `sudo ln -s /usr/lib/w3m/w3mimgdisplay /usr/bin`
 
-    - Try with ueberzug:
+    - Try with `ueberzug` (this could work with `tmux`, I haven't managed yet):
 
        `pip3 install ueberzug pillow-simd`
-
-Add to `rc.conf`:
-
-        set preview_images true
-        set use_preview_script true
-        set preview_script ~/.config/ranger/scope.sh
-
 
 * PDF: https://unix.stackexchange.com/questions/407116/preview-pdf-as-image-in-ranger
 
@@ -63,7 +47,6 @@ Add these lines to rc.conf:
 
         set colorscheme isene
         default_linemode classify
-
 
   * ranger_devicons: https://github.com/alexanderjeurissen/ranger_devicons
 
