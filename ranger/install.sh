@@ -2,6 +2,9 @@
 
 RANGE_CONF_PATH="$HOME/.config/ranger"
 
+# Function to display commands
+exe() { echo "\$ $@" ; "$@" ; }
+
 #
 # Create backup
 #
@@ -10,17 +13,14 @@ BACKUP_PATH=~/backup
 # if backup already existed, move to `/tmp/` instead of replacing it (just in case)
 if [ -d $BACKUP_PATH/ranger ] ; then
   rm -fr /tmp/ranger
-  echo mv -f $BACKUP_PATH/ranger /tmp/
-  mv -f $BACKUP_PATH/ranger /tmp/
+  exe mv -f $BACKUP_PATH/ranger /tmp/
 fi
 
-echo mkdir -p $BACKUP_PATH
-mkdir -p $BACKUP_PATH
-echo mv -f $RANGE_CONF_PATH $BACKUP_PATH/
-mv -f $RANGE_CONF_PATH $BACKUP_PATH/
+exe mkdir -p $BACKUP_PATH
+exe mv -f $RANGE_CONF_PATH $BACKUP_PATH/
 
 #
-# Determine my path
+# Determine my path.
 #
 MY_PATH="`dirname \"$0\"`"              # relative
 MY_PATH="`( cd \"$MY_PATH\" && pwd )`"  # absolutized and normalized
@@ -31,23 +31,20 @@ if [ -z "$MY_PATH" ] ; then
 fi
 
 #
-# installation
+# Installation
+# Note: it assumes `bat` is installed
 #
-echo sudo apt-get install ranger caca-utils highlight atool w3m poppler-utils mediainfo ffmpegthumbnailer
-sudo apt-get install ranger caca-utils highlight atool w3m poppler-utils mediainfo ffmpegthumbnailer
+exe sudo apt-get install ranger caca-utils atool w3m poppler-utils mediainfo ffmpegthumbnailer
 
-# check if ranger configuration folder exists
-echo mkdir -p $RANGE_CONF_PATH
-mkdir -p $RANGE_CONF_PATH
+# Check if ranger configuration folder exists.
+exe mkdir -p $RANGE_CONF_PATH
 
-# copy range configuration
-echo cp $MY_PATH/rc.conf $RANGE_CONF_PATH/
-cp $MY_PATH/rc.conf $RANGE_CONF_PATH
+# Copy range configuration.
+exe cp $MY_PATH/rc.conf $RANGE_CONF_PATH
 
-# copy scope.sh to `~/.config/ranger`
-echo ranger --copy-config=scope
-ranger --copy-config=scope
+# Copy scope.sh to `~/.config/ranger`.
+exe ranger --copy-config=scope
 
-# apply patch for previews
-echo patch $RANGE_CONF_PATH/scope.sh < $MY_PATH/scope.sh.patch  # this might need adjustments for the newerst ranger versions
-patch $RANGE_CONF_PATH/scope.sh < $MY_PATH/scope.sh.patch  # this might need adjustments for the newerst ranger versions
+# Apply patch for previews.
+# Note: this might need adjustments for the newerst ranger versions.
+exe eval "patch $RANGE_CONF_PATH/scope.sh < $MY_PATH/scope.sh.patch"
