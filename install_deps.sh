@@ -4,10 +4,6 @@ echo "Install dependencies..."
 
 cd /tmp
 
-# bat
-wget https://github.com/sharkdp/bat/releases/download/v0.18.2/bat_0.18.2_amd64.deb
-sudo dpkg -i bat_0.18.2_amd64.deb
-
 # fd
 wget https://github.com/sharkdp/fd/releases/download/v7.4.0/fd_7.4.0_amd64.deb
 sudo dpkg -i fd_7.4.0_amd64.deb
@@ -20,7 +16,6 @@ sudo dpkg -i ripgrep_11.0.2_amd64.deb
 
 
 #
-# vim-gnome: +clipboard option
+# APT
 #
 sudo apt install mc silversearcher-ag tmux dfc axel
-

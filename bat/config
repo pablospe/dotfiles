@@ -1,0 +1,8 @@
+# Set the theme to "gruvbox-dark"
+--theme="gruvbox-dark"
+
+# Use italic text on the terminal (not supported on all terminals)
+--italic-text=always
+
+# Use C++ syntax for .ino files (example)
+--map-syntax "*.ino:C++"
