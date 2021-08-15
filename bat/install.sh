@@ -34,9 +34,8 @@ fi
 # Installation
 # Note: it assumes `bat` is installed
 #
-cd /tmp
-exe wget https://github.com/sharkdp/bat/releases/download/v0.18.2/bat_0.18.2_amd64.deb
-exe sudo dpkg -i bat_0.18.2_amd64.deb
+exe wget https://github.com/sharkdp/bat/releases/download/v0.18.2/bat_0.18.2_amd64.deb -P /tmp
+exe sudo dpkg -i /tmp/bat_0.18.2_amd64.deb
 # exe sudo apt-get install bat
 
 # Check if bat configuration folder exists.
