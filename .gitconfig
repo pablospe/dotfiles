@@ -39,5 +39,8 @@
 	new = green bold
 	whitespace = red reverse
 
+[credential "https://github.com"]
+	helper = !gh auth git-credential
+
 [include]
     path = .delta.gitconfig
