@@ -18,7 +18,7 @@ fi
 # Installation
 #
 wget https://github.com/dandavison/delta/releases/download/0.8.3/git-delta-musl_0.8.3_amd64.deb -P /tmp
-sudo dpkg -i /tmp/git-delta_0.8.3_amd64.deb
+sudo dpkg -i /tmp/git-delta-musl_0.8.3_amd64.deb
 
 # Copy delta configuration.
 exe cp $MY_PATH/delta.gitconfig $HOME/.delta.gitconfig
