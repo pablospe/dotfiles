@@ -39,7 +39,7 @@ set-window-option -g pane-border-style fg=$base03
 set-option -g message-style bg=$base00,fg=$base0C
 
 # pane number display
-set-option -g display-panes-active-colour $base0B
+# set-option -g display-panes-active-colour $base0B
 set-option -g display-panes-colour $base03
 
 # clock
