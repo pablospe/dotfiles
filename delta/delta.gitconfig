@@ -6,6 +6,7 @@
 
 [delta]
     features = side-by-side line-numbers decorations
+    # syntax-theme = Dracula
     syntax-theme = Dracula
     # syntax-theme = Monokai Extended
     # plus-style = syntax "#003800"
