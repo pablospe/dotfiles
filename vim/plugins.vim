@@ -18,6 +18,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'ryanoasis/vim-devicons'
 
 " Color scheme
+Plug 'markvincze/panda-vim'
 Plug 'morhetz/gruvbox'
 Plug 'altercation/vim-colors-solarized'
 
@@ -95,4 +96,3 @@ Plug 'tadaa/vimade'
 
 " Initialize plugin system
 call plug#end()
-

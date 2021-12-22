@@ -18,6 +18,7 @@ set backupdir=$HOME/.vim/swapfiles//
 
 syntax on
 colorscheme gruvbox
+" colorscheme panda
 " colorscheme deus      " very similar to gruvbox
 " colorscheme onedark
 " colorscheme apprentice
