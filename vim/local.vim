@@ -27,8 +27,8 @@ hi MatchParen cterm=bold ctermbg=none ctermfg=120
 
 " Easymotion:
 let g:EasyMotion_keys = 'asdfqwerzxcvlkjpoiumhytgb'
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
+map  <Leader>/ <Plug>(easymotion-sn)
+omap <Leader>/ <Plug>(easymotion-tn)
 let g:EasyMotion_smartcase = 1
 
 " Move to line
@@ -40,7 +40,7 @@ set hlsearch
 set ignorecase
 set smartcase
 
-map <Leader>/  <Plug>(incsearch-forward)
+map /  <Plug>(incsearch-forward)
 map <Leader>g/ <Plug>(incsearch-stay)
 map <Leader>?  <Plug>(incsearch-backward)
 
@@ -122,8 +122,8 @@ vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
 " Easier horizontal scrolling
-map z; zL
-map zl zH
+map zl zL
+map zh zH
 
 
 set number                     " Show current line number
