@@ -44,7 +44,7 @@ echo 'source $HOME/.bash/fzf.sh' >>~/.bashrc
 #
 # forgit (fzf for git)
 #
-# wget https://raw.githubusercontent.com/wfxr/forgit/master/forgit.plugin.zsh
+wget https://raw.githubusercontent.com/wfxr/forgit/master/forgit.plugin.zsh
 cp forgit.plugin.zsh $HOME/.bash/
 echo '' >>~/.bashrc
 echo '# forgit (fzf for git)' >>~/.bashrc
