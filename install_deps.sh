@@ -7,5 +7,6 @@ echo "Install dependencies..."
 #
 # APT
 #
-sudo apt install mc silversearcher-ag tmux dfc axel fd-find ripgrep vim-gtk3
+sudo apt install -y mc silversearcher-ag tmux dfc axel fd-find ripgrep vim-gtk3 zsh htop openssh-server
+
 
