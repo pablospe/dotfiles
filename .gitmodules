@@ -1,3 +1,4 @@
 [submodule "zsh"]
 	path = zsh
-	url = git@github.com:pablospe/zshconfig.git
+        # url = git@github.com:pablospe/zshconfig.git
+        url = https://github.com/pablospe/zshconfig.git
