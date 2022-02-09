@@ -21,3 +21,4 @@ cd ..
 ./install_tmux.sh
 
 zsh/install.sh
+
