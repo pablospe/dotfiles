@@ -1,0 +1,44 @@
+FROM ubuntu:20.04
+
+ARG user=docker
+ARG uid=1000
+ARG gid=1000
+ARG shell=/bin/bash
+ENV SHELL=${shell}
+
+# Minimal tools.
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive TZ="Europe/Zurich" apt-get install -y --no-install-recommends tzdata && \
+    apt-get install -y apt-utils git tmux $(basename ${SHELL})
+
+# SSH configuration.
+RUN apt-get install -y openssh-server && \
+    echo "IdentityFile ~/.ssh/id_rsa" >>/etc/ssh/ssh_config
+
+# Create new user and disable password and gecos for later.
+# --gecos explained well here: https://askubuntu.com/a/1195288/635348.
+RUN groupadd -g $gid -o $user && \
+    adduser \
+        --disabled-password \
+        --gecos '' \
+        --shell ${SHELL} \
+        --uid $uid \
+        --gid $gid \
+        $user
+
+# Add the user to sudo group.
+RUN apt-get install -y sudo && \
+    adduser $user sudo
+
+# Ensure sudo group users are not asked for a password when using sudo command.
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >>/etc/sudoers
+
+USER $user
+WORKDIR /home/$user
+
+# Dotfiles.
+RUN git clone --recursive https://github.com/pablospe/dotfiles.git && \
+    cd dotfiles && ./install.sh
+
+ENTRYPOINT sudo service ssh restart && $SHELL
+EXPOSE 22/tcp

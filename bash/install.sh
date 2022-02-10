@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Files to be overwritten
 FILES='.bash .fzf .bash-git-prompt'
@@ -34,7 +34,7 @@ mkdir -p $HOME/.bash
 #
 rm -fr ~/.fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
-~/.fzf/install
+~/.fzf/install --all --no-fish
 cp ${MY_PATH}/fzf.sh $HOME/.bash/
 
 echo '' >>~/.bashrc
@@ -75,4 +75,3 @@ wget https://raw.github.com/trapd00r/LS_COLORS/master/LS_COLORS -O $HOME/.dircol
 echo '' >>~/.bashrc
 echo '# LS_COLORS' >>~/.bashrc
 echo 'eval $(dircolors -b $HOME/.dircolors)' >> $HOME/.bashrc
-

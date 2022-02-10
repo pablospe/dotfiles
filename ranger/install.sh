@@ -34,7 +34,7 @@ fi
 # Installation
 # Note: it assumes `bat` is installed
 #
-exe sudo apt-get install ranger caca-utils atool w3m poppler-utils mediainfo ffmpegthumbnailer
+exe sudo apt install -y ranger caca-utils atool w3m poppler-utils mediainfo ffmpegthumbnailer
 
 # exe wget http://archive.ubuntu.com/ubuntu/pool/universe/r/ranger/ranger_1.9.3-1build1_all.deb -P /tmp
 # exe sudo dpkg -i /tmp/ranger_1.9.3-1build1_all.deb

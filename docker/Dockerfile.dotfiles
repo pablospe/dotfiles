@@ -1,0 +1,19 @@
+FROM ubuntu:20.04
+
+RUN apt update && \
+    DEBIAN_FRONTEND=noninteractive TZ="Europe/Zurich" apt-get install -y --no-install-recommends tzdata && \
+    apt-get install -y git bash sudo tmux openssh-server && \
+    git clone --recursive https://github.com/pablospe/dotfiles.git /dotfiles && \
+    cd /dotfiles && ./install.sh
+
+RUN chsh -s $(which zsh)
+
+#
+# How to build?
+#
+#   docker build -t ubuntu20.04 -f Dockerfile.dotfiles .
+#
+# How to run?
+#
+#   docker run -it ubuntu20.04 zsh
+#

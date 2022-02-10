@@ -1,7 +1,7 @@
 [user]
+	name = Pablo Speciale
 	email = pablo.speciale@gmail.com
 	; email = Pablo.Speciale@microsoft.com
-	name = Pablo Speciale
 
 [core]
 	editor = vim
@@ -38,9 +38,6 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
-
-[credential "https://github.com"]
-	helper = !gh auth git-credential
 
 [include]
     path = .delta.gitconfig
