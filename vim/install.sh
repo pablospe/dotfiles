@@ -39,7 +39,7 @@ echo Installing vimplug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-if [ $1 != "docker" ]; then
+if [ "docker" != "$1" ]; then
     echo vim -E +PlugInstall +qall
     vim -E +PlugInstall +qall 2>/dev/null
 fi
