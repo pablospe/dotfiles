@@ -6,17 +6,18 @@ echo "Install dependencies..."
 # APT
 #
 sudo apt-get install -y \
-  tmux \
-  git \
-  openssh-server \
-  mc \
-  silversearcher-ag \
-  dfc \
   axel \
+  curl \
+  dfc \
   fd-find \
-  ripgrep \
-  vim-gtk3 \
-  zsh \
+  git \
   htop \
-  fd-find \
-  curl
+  mc \
+  openssh-server \
+  ripgrep \
+  silversearcher-ag \
+  tig \
+  tmux \
+  tree \
+  vim-gtk3 \
+  zsh
