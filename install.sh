@@ -22,6 +22,7 @@ ${ROOT}/bat/install.sh
 # ${ROOT}/ranger/install.sh
 # cd ${ROOT}/vim && ${ROOT}/install.sh && cd ${ROOT}
 ${ROOT}/install_htop_config.sh
+${ROOT}/install_tigrc.sh
 ${ROOT}/install_tmux.sh
 ${ROOT}/zsh/install.sh
 
