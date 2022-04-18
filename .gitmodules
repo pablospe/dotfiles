@@ -1,5 +1,5 @@
 [submodule "zsh"]
 	path = zsh
         # url = git@github.com:pablospe/zshconfig.git
-        url = https://github.com/pablospe/zshconfig.git
-        branch = master
+	url = https://github.com/pablospe/zshconfig.git
+	branch = master
