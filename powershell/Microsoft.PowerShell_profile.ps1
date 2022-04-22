@@ -1,3 +1,5 @@
+cd $HOME
+
 #
 # oh-my-posh
 #
@@ -16,12 +18,11 @@ Import-Module ZLocation
 #
 # Enable the prompt
 #
-Set-Prompt
-Set-Theme Paradox
-# Set-Theme Avit
-# Set-Theme Sorin
-# Set-Theme Zash
-# Set-Theme Operator
+Set-PoshPrompt -Theme Paradox
+# Set-PoshPrompt -Theme Avit
+# Set-PoshPrompt -Theme Sorin
+# Set-PoshPrompt -Theme Zash
+# Set-PoshPrompt -Theme Operator
 
 #
 # Fuzzy search
@@ -29,6 +30,8 @@ Set-Theme Paradox
 Import-Module PSFzf
 # replace 'Ctrl+t' and 'Ctrl+r' with your preferred bindings:
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
+
+
 
 # CTRL + D to exit
 Set-PSReadlineKeyHandler -Key Ctrl+d -Function DeleteCharOrExit
@@ -88,10 +91,16 @@ New-Alias op explorer.exe
 
 
 #
-# Cemplete like bash (instead of first result)
+# Complete like bash (instead of first result)
 #
 # https://stackoverflow.com/questions/8264655/how-to-make-powershell-tab-completion-work-like-bash/37715242#37715242
-Set-PSReadlineKeyHandler -Key Tab -Function Complete
+# Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+
+# PSFzf can replace the standard tab completion:
+Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
 
 # Disable PowerShell beep
 Set-PSReadlineOption -BellStyle None
+
+# Icons
+Import-Module -Name Terminal-Icons
