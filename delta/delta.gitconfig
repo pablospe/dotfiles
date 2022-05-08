@@ -32,7 +32,7 @@
     minus-style = normal "#5e0000"
     # minus-non-emph-style = syntax "#300000"
 
-    plus-emph-style = syntax bold "#006b5e"
+    plus-emph-style = syntax bold "#007e5e"
     plus-style = syntax "#003500"
     # plus-style = syntax "#003000"
     # plus-non-emph-style = syntax "#003000"
