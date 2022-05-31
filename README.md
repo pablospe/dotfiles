@@ -1,7 +1,9 @@
 # dotfiles
 configuration files
 
-## Submodules
-    > git clone git@github.com:pablospe/dotfiles.git
+## Installation
+    > git clone --recurse-submodules --remote-submodules --depth 1 -j8 git@github.com:pablospe/dotfiles.git
     > cd dotfiles/
-    > git pull && git submodule update --init --recursive
+    > git pull && git submodule update --init --recursive --remote
+    > ./install.sh
+
