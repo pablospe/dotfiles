@@ -9,6 +9,7 @@ sudo apt-get install -y \
   axel \
   curl \
   dfc \
+  fasd \
   fd-find \
   git \
   htop \
