@@ -10,7 +10,6 @@ sudo apt-get install -y \
   curl \
   dfc \
   fasd \
-  fd-find \
   git \
   htop \
   mc \
@@ -22,3 +21,10 @@ sudo apt-get install -y \
   tree \
   vim-gtk3 \
   zsh
+
+TMP=$(mktemp -d)
+cd $TMP
+fd_url=$(curl -s https://api.github.com/repos/sharkdp/fd/releases/latest | grep 'browser_' | cut -d\" -f4 | grep '_amd64' | grep --invert-match 'musl')
+wget $fd_url
+sudo dpkg -i $(basename $fd_url)
+rm -fr $TMP
