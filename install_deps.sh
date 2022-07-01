@@ -17,10 +17,20 @@ sudo apt-get install -y \
   ripgrep \
   silversearcher-ag \
   tig \
-  tmux \
   tree \
   vim-gtk3 \
+  xsel \
   zsh
+
+# Latest Tmux (AppImage).
+curl -s https://api.github.com/repos/nelsonenzo/tmux-appimage/releases/latest \
+| grep "browser_download_url.*appimage" \
+| cut -d : -f 2,3 \
+| tr -d \" \
+| wget -qi - \
+&& chmod +x tmux.appimage
+&& mv tmux.appimage /usr/local/bin/tmux
+
 
 TMP=$(mktemp -d)
 cd $TMP
