@@ -47,7 +47,7 @@
     features = pablo-theme
     side-by-side = true
     navigate = true
-    # paging = always
+    paging = always
     # pager = less -RKc
 
 [interactive]
