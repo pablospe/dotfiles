@@ -64,14 +64,13 @@ set -g status-right "$tm_tunes$tm_battery $tm_date $tm_host "
 
 # Window status
 set -g window-status-format ' #[fg=colour32]#I#[fg=colour8]:#W '
-set -g window-status-current-format ' #I#[fg=colour7]:#W '
+set -g window-status-current-format ' #I#[fg=colour255]:#W '
 
 # Current window status
-set -g window-status-current-style fg=colour154,bg=colour12,bold
+set -g window-status-current-style fg=colour190,bg=colour12,bold
 
 # Window with activity status
-# fg and bg are flipped here due to a bug in tmux
-set -g window-status-activity-style fg=colour8,bg=colour6
+set -g window-status-activity-style bg=colour8,fg=colour6
 
 # Window separator
 set -g window-status-separator ""
