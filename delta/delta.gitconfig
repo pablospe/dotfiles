@@ -6,8 +6,7 @@
 
 [delta "pablo-theme"]
     # Based on woolly-mammoth: https://github.com/Kr1ss-XD.
-    commit-decoration-style = 232 130 box
-    commit-style = 232 bold italic 130
+    commit-decoration-style = 130 box
     dark = true
     file-decoration-style = "#606018" overline
     file-added-label = [●]
@@ -16,7 +15,7 @@
     file-removed-label = [⛌]
     file-renamed-label = [→]
     file-style = 232 bold 184
-    hunk-header-decoration-style = none
+    # hunk-header-decoration-style = none
     hunk-header-style = syntax bold italic 237
 
     line-numbers = true
@@ -37,7 +36,8 @@
     # plus-style = syntax "#003000"
     # plus-non-emph-style = syntax "#003000"
 
-    syntax-theme = gruvbox-dark
+    # syntax-theme = gruvbox-dark
+    syntax-theme = OneHalfDark
     whitespace-error-style = "#80002a" reverse
     zero-style = syntax
     blame-format = "{author:<18} ({commit:>7}) ┊{timestamp:^16}┊ "
@@ -47,7 +47,7 @@
     features = pablo-theme
     side-by-side = true
     navigate = true
-    paging = auto
+    # paging = always
     # pager = less -RKc
 
 [interactive]
