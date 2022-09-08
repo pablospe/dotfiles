@@ -13,6 +13,20 @@ set tab-size = 4
 set ignore-case = yes
 set mouse = true
 
+# Open delta with git show.
+bind generic d >sh -c "DELTA_PAGER='less -RKc' git show %(commit)"
+
+# Open delta in a split tmux pane. Handles the paging issue for a short diff output.
+# See: https://github.com/jonas/tig/issues/542#issuecomment-1240117446
+#
+# Note: tig must be running inside tmux already.
+#
+# Floating in the middle of the screen.
+bind generic <Enter> @tmux popup -w 95% -h 90% -E 'DELTA_PAGER="less -RKc" git show %(commit)'
+# Spliting in the bottom half.
+# bind generic <Enter> @tmux popup -y 100% -w 100% -h 70% -E 'DELTA_PAGER="less -RKc" git show %(commit)'
+
+
 # Vim-style keybindings for Tig
 #
 # https://github.com/jonas/tig/blob/master/contrib/vim.tigrc

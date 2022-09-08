@@ -41,6 +41,3 @@
 
 [include]
     path = .delta.gitconfig
-
-[tig "bind"]
-    generic = "<enter>" >git show %(commit)
