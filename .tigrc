@@ -16,6 +16,14 @@ set mouse = true
 # Open delta with git show.
 bind generic d >sh -c "DELTA_PAGER='less -RKc' git show %(commit)"
 
+# https://github.com/jonas/tig/issues/542#issuecomment-1242039892
+bind generic <Enter> @sh -c "\
+  ( \
+    tmux has-session -t \".{last}\" \
+    && tmux respawn-pane -t \".{last}\" -k 'LESS= DELTA_PAGER=\"less -R\" git show %(commit)' \
+  ) \
+  || tmux split-window -l 50% 'LESS= DELTA_PAGER=\"less -R\" git show %(commit)'"
+
 # Open delta in a split tmux pane. Handles the paging issue for a short diff output.
 # See: https://github.com/jonas/tig/issues/542#issuecomment-1240117446
 #
