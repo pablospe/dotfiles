@@ -17,7 +17,7 @@ set mouse = true
 bind generic d >sh -c "DELTA_PAGER='less -RKc' git show %(commit)"
 
 # https://github.com/jonas/tig/issues/542#issuecomment-1242039892
-bind generic <Enter> @sh -c "\
+bind generic D @sh -c "\
   ( \
     tmux has-session -t \".{last}\" \
     && tmux respawn-pane -t \".{last}\" -k 'LESS= DELTA_PAGER=\"less -R\" git show %(commit)' \
@@ -30,7 +30,7 @@ bind generic <Enter> @sh -c "\
 # Note: tig must be running inside tmux already.
 #
 # Floating in the middle of the screen.
-bind generic <Enter> @tmux popup -w 95% -h 90% -E 'DELTA_PAGER="less -RKc" git show %(commit)'
+# bind generic <Enter> @tmux popup -w 95% -h 90% -E 'DELTA_PAGER="less -RKc" git show %(commit)'
 # Spliting in the bottom half.
 # bind generic <Enter> @tmux popup -y 100% -w 100% -h 70% -E 'DELTA_PAGER="less -RKc" git show %(commit)'
 
