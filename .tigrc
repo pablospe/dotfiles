@@ -50,7 +50,12 @@ bind main C ?git checkout -b "%(commit)"
 bind main P ?git cherry-pick "%(commit)"
 # Show commit statistics for the author under the cursor.
 bind main U +sh -c 'git --no-pager shortlog -s --author="$(git show -s --format=%aE %(commit))" </dev/tty'
-
+# Others git bindings to match zsh.
+bind generic g  none
+bind generic gp !git push
+bind generic gl !sh -c 'git pull && git submodule update --init --recursive'
+bind generic gc !git commit
+bind status  a  status-update  # git add (stage and unstage)
 
 # Vim-style keybindings for Tig
 #
@@ -61,11 +66,9 @@ bind generic j move-down
 bind generic k move-up
 bind generic l scroll-right
 
-bind generic g  none
 bind generic gg move-first-line
 bind generic gj next
 bind generic gk previous
-bind generic gp parent
 bind generic gP back
 bind generic gn view-next
 
@@ -113,7 +116,6 @@ bind generic @+ :toggle diff-context +1
 bind status  u  none
 bind stage   u  none
 bind generic uu status-update
-bind status  a  status-update
 bind generic ur status-revert
 bind generic um status-merge
 bind generic ul stage-update-line
