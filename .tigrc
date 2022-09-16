@@ -12,9 +12,13 @@ set main-view = \
 set diff-options = --format=medium
 set status-show-untracked-dirs = false
 set status-show-untracked-files = false
-set tab-size = 4
+set tab-size = 2
 set ignore-case = yes
 set mouse = true
+
+#
+# Bindings for Delta
+#
 
 # Open delta with git show.
 bind generic d >sh -c "DELTA_PAGER='less -RKc' git show %(commit)"
@@ -36,6 +40,16 @@ bind generic D @sh -c "\
 # bind generic <Enter> @tmux popup -w 95% -h 90% -E 'DELTA_PAGER="less -RKc" git show %(commit)'
 # Spliting in the bottom half.
 # bind generic <Enter> @tmux popup -y 100% -w 100% -h 70% -E 'DELTA_PAGER="less -RKc" git show %(commit)'
+
+#
+# Bindings for Git
+#
+# Create and checkout a new branch; specify custom prompt.
+bind main C ?git checkout -b "%(commit)"
+# Cherry pick.
+bind main P ?git cherry-pick "%(commit)"
+# Show commit statistics for the author under the cursor.
+bind main U +sh -c 'git --no-pager shortlog -s --author="$(git show -s --format=%aE %(commit))" </dev/tty'
 
 
 # Vim-style keybindings for Tig
@@ -99,6 +113,7 @@ bind generic @+ :toggle diff-context +1
 bind status  u  none
 bind stage   u  none
 bind generic uu status-update
+bind status  a  status-update
 bind generic ur status-revert
 bind generic um status-merge
 bind generic ul stage-update-line
@@ -109,7 +124,7 @@ bind generic c  none
 bind generic cc !git commit
 bind generic ca !?@git commit --amend --no-edit
 
-bind generic K view-help
+bind generic ? view-help
 bind generic <C-w><C-w> view-next
 
 # Tig Theme based on gruvbox:
@@ -121,12 +136,12 @@ bind generic <C-w><C-w> view-next
 
 # General colors
 color default                       246         235
-color cursor                        223         236
+color cursor                        193         067             bold
 color status                        default     default
 color title-focus                   default     default
 color title-blur                    default     default
 color delimiter                     245         default
-color header                        66          default         bold
+color header                        066         default         bold
 color section                       172         default
 color line-number                   241         default
 color id                            132         default
@@ -140,14 +155,14 @@ color file-size                     default     default
 color grep.file                     166         default
 
 # Main view colors
-color main.cursor                   223            236
+# color main.cursor                 223         236
 color graph-commit                  166         default
 color main-head                     166         default         bold
 color main-remote                   172         default
 color main-tracked                  132         default
 color main-tag                      223         default
 color main-local-tag                106         default
-color main-ref                      72          default
+color main-ref                      072         default
 
 # Status view colors
 color status.header                 172         236             bold
@@ -160,7 +175,7 @@ color stat-none                     default     default
 # Help view colors
 color help.header                   241         default         bold
 color help.section                  166         default
-color help.cursor                   72          236
+# color help.cursor                 072         236
 color help-group                    166         default
 color help-action                   166         default
 
@@ -170,7 +185,7 @@ color "Refs: "                      default     default
 color "Author: "                    109         default
 color "AuthorDate: "                default     default
 color "Commit: "                    106         default
-color "CommitDate: "                66          default
+color "CommitDate: "                066         default
 color "Merge: "                     default     default
 color "---"                         167         default
 color "+++ "                        142         default
@@ -187,31 +202,31 @@ color "diff-tree "                  214         default
 color "TaggerDate: "                default     default
 
 # Log view colors
-color "Date: "                      72          default
+color "Date: "                      072         default
 
 # Signature colors
-color "gpg: "                       72          default
-color "Primary key fingerprint: "   72          default
+color "gpg: "                       072         default
+color "Primary key fingerprint: "   072         default
 
 # grep view
-color grep.file			        	208     	default         bold
-color grep.line-number		        241     	default         bold
-color grep.delimiter		        241	        default         bold
-color delimiter			            142     	default         bold
+color grep.file                     208         default         bold
+color grep.line-number              241         default         bold
+color grep.delimiter                241         default         bold
+color delimiter                     142         default         bold
 
 # lines in digraph
-color palette-0		            	166     	default         bold
-color palette-1		            	66	        default         bold
-color palette-2		            	172	        default         bold
-color palette-3		            	132	        default         bold
-color palette-4		            	72	        default         bold
-color palette-5		            	106	        default         bold
-color palette-6		            	124	        default         bold
-color palette-7		            	250	        default         bold
+color palette-0                     166         default         bold
+color palette-1                     066         default         bold
+color palette-2                     172         default         bold
+color palette-3                     132         default         bold
+color palette-4                     072         default         bold
+color palette-5                     106         default         bold
+color palette-6                     124         default         bold
+color palette-7                     250         default         bold
 # repeat
-color palette-8		            	166	        default
-color palette-9		            	66	        default
-color palette-10	            	172	        default
-color palette-11	            	132	        default
-color palette-12	            	72	        default
-color palette-13	            	106	        default
+color palette-8                     166         default
+color palette-9                     066         default
+color palette-10                    172         default
+color palette-11                    132         default
+color palette-12                    072         default
+color palette-13                    106         default
