@@ -153,7 +153,7 @@ let &colorcolumn = join(range(81,999), ',')
 " Highlight current line
 set cursorline
 hi CursorLine cterm=NONE ctermbg=237 ctermfg=none
-hi CursorLineNr ctermbg=53
+hi CursorLineNr ctermbg=89 ctermfg=White
 
 autocmd WinEnter * setlocal relativenumber
 autocmd WinEnter *

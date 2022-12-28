@@ -20,6 +20,7 @@ Plug 'ryanoasis/vim-devicons'
 " Color scheme
 Plug 'markvincze/panda-vim'
 Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 Plug 'altercation/vim-colors-solarized'
 
 " Airline

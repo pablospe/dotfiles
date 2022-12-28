@@ -17,7 +17,8 @@ set directory=$HOME/.vim/swapfiles//
 set backupdir=$HOME/.vim/swapfiles//
 
 syntax on
-colorscheme gruvbox
+colorscheme gruvbox-material
+" colorscheme gruvbox
 " colorscheme panda
 " colorscheme deus      " very similar to gruvbox
 " colorscheme onedark
@@ -49,9 +50,12 @@ set hidden
 
 let g:vim_current_word#highlight_delay = 0
 hi CurrentWord ctermbg=53
-hi CurrentWordTwins ctermbg=237
+hi CurrentWordTwins ctermbg=23
 autocmd BufAdd NERD_tree_*,your_buffer_name.rb,*.js :let b:vim_current_word_disabled_in_this_buffer = 1
 noremap <Leader>h :set hlsearch! hlsearch?<CR>
+
+" Selection color
+hi Visual ctermbg=52 ctermfg=NONE
 
 let g:multi_cursor_exit_from_visual_mode=1
 let g:multi_cursor_exit_from_insert_mode=1
