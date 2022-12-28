@@ -30,7 +30,7 @@ curl -s https://api.github.com/repos/nelsonenzo/tmux-appimage/releases/latest \
 | cut -d : -f 2,3 \
 | tr -d \" \
 | wget -qi - \
-&& chmod +x tmux.appimage
+&& chmod +x tmux.appimage \
 && sudo mv tmux.appimage /usr/local/bin/tmux
 
 # Latest fd-find.
