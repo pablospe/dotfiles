@@ -31,6 +31,11 @@ Import-Module PSFzf
 # replace 'Ctrl+t' and 'Ctrl+r' with your preferred bindings:
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
 
+$Env:FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+
+$Env:FZF_DEFAULT_OPTS="--exact --border --height 15 --layout=reverse --info=hidden --prompt='$' --pointer='=>' --marker='+' --cycle --select-1 --color=dark --bind '?:toggle-preview,ctrl-a:select-all,ctrl-d:half-page-down,ctrl-u:half-page-up,ctrl-l:clear-query,home:first,end:last,enter:accept-non-empty' --color=fg:-1,bg:-1,hl:#fb8aa4,fg+:-1,bg+:-1,hl+:#55E579 --color=info:#af87ff,prompt:#fb8aa4,pointer:#55E579,marker:#55E579,spinner:#55E579"
+
+$Env:FZF_CTRL_R_OPTS="--with-nth 2.. --bind 'shift-tab:up,tab:down'"
 
 
 # CTRL + D to exit
