@@ -10,6 +10,7 @@ sudo apt-get install -y \
   chafa \
   curl \
   dfc \
+  exa \
   exiftool \
   fasd \
   git \

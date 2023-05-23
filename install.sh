@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
+PS4='\033[1;36m$(date +%H:%M:%S)\033[0m '
 set -euxo pipefail
-
 
 # Determine my path
 ROOT="`dirname \"$0\"`"              # relative
@@ -19,8 +19,8 @@ ${ROOT}/install_gitconfig.sh
 ${ROOT}/bash/install.sh
 ${ROOT}/delta/install.sh
 ${ROOT}/bat/install.sh
-# ${ROOT}/ranger/install.sh
-# cd ${ROOT}/vim && ${ROOT}/install.sh && cd ${ROOT}
+${ROOT}/ranger/install.sh
+cd ${ROOT}/vim && ${ROOT}/vim/install.sh && cd ${ROOT}
 ${ROOT}/install_htop_config.sh
 ${ROOT}/install_tigrc.sh
 ${ROOT}/install_tmux.sh
