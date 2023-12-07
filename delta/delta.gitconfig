@@ -49,6 +49,9 @@
     navigate = true
     paging = auto
     # pager = less -RKc
+    # https://github.com/dandavison/delta/blob/32a3994024b0a8f38c4e01fac2334945408e4e98/manual/src/tips-and-tricks/using-delta-with-vscode.md
+    hyperlinks = true
+    hyperlinks-file-link-format = "vscode://file/{path}:{line}"
 
 [interactive]
     diffFilter = delta --color-only --features=interactive
