@@ -21,7 +21,7 @@ fi
 #
 # Installation
 #
-VERSION="0.12.1"
+VERSION="0.16.5"
 wget "https://github.com/dandavison/delta/releases/download/${VERSION}/git-delta-musl_${VERSION}_amd64.deb" -P /tmp
 sudo dpkg -i "/tmp/git-delta-musl_${VERSION}_amd64.deb"
 
