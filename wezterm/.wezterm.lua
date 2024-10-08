@@ -17,15 +17,15 @@ config.color_scheme = 'Panda (Gogh)'
 config.font = wezterm.font("Hack")
 config.font_size = 9.0
 
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.97
 
 -- Define key bindings
 config.keys = {
   {key="j", mods="ALT", action=wezterm.action{ActivateTabRelative=-1}},
   {key="k", mods="ALT", action=wezterm.action{ActivateTabRelative=1}},
-  
+
   {key="n", mods="CTRL|ALT", action=wezterm.action{SpawnTab="CurrentPaneDomain"}},
-  
+
   {key="1", mods="ALT", action=wezterm.action{ActivateTab=0}},
   {key="2", mods="ALT", action=wezterm.action{ActivateTab=1}},
   {key="3", mods="ALT", action=wezterm.action{ActivateTab=2}},
@@ -35,7 +35,7 @@ config.keys = {
   {key="7", mods="ALT", action=wezterm.action{ActivateTab=6}},
   {key="8", mods="ALT", action=wezterm.action{ActivateTab=7}},
   {key="9", mods="ALT", action=wezterm.action{ActivateTab=8}},
-  
+
 --   {key="LeftArrow", mods="CTRL+SHIFT", action=wezterm.action.DisableDefaultAssignment},
 --   {key="RightArrow", mods="CTRL+SHIFT", action=wezterm.action.DisableDefaultAssignment},
 }
