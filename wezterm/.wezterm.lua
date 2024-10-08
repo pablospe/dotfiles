@@ -76,7 +76,7 @@ end
 -- Hide the tab bar if there is only one tab
 config.hide_tab_bar_if_only_one_tab = true
 config.switch_to_last_active_tab_when_closing_tab = true
-config.use_fancy_tab_bar = false
+-- config.use_fancy_tab_bar = false
 
 config.tab_bar_at_bottom = true
 
