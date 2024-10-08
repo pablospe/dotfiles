@@ -86,18 +86,42 @@ end
 
 -- Checking if tmux is open doesn't work.
 -- -- Check if tmux is running and adjust key bindings
+-- -- See: https://github.com/wez/wezterm/discussions/2329
 -- if os.getenv("TMUX") and os.getenv("TMUX") == nil then
 --   -- Leader is the same as my old tmux prefix
 --   config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
 --   config.keys = {
---     { mods = "LEADER", key = "-", action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' } },
---     { mods = "LEADER", key = "\\", action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' } },
---     { mods = "LEADER", key = "h", action = wezterm.action.ActivatePaneDirection "Left" },
---     { mods = "LEADER", key = "j", action = wezterm.action.ActivatePaneDirection "Down" },
---     { mods = "LEADER", key = "k", action = wezterm.action.ActivatePaneDirection "Up" },
---     { mods = "LEADER", key = "l", action = wezterm.action.ActivatePaneDirection "Right" },
+-- 		-- Window management
+-- 		{key="a",  mods="LEADER", action=act{SendString="`"}},
+-- 		{key="-",  mods="LEADER", action=act{SplitVertical={domain="CurrentPaneDomain"}} },
+-- 		{key="\\", mods="LEADER", action=act.SplitHorizontal{domain="CurrentPaneDomain"}},
+-- 		{key="z" , mods="LEADER", action="TogglePaneZoomState" },
+-- 		{key="c" , mods="LEADER", action=act{SpawnTab="CurrentPaneDomain"}},
+
+-- 		{key="h", mods="LEADER", action=act.ActivatePaneDirection("Left")},
+-- 		{key="j", mods="LEADER", action=act.ActivatePaneDirection("Down")},
+-- 		{key="k", mods="LEADER", action=act.ActivatePaneDirection("Up")},
+-- 		{key="l", mods="LEADER", action=act.ActivatePaneDirection("Right")},
+
+-- 		{key="H", mods="LEADER", action=act{AdjustPaneSize={"Left", 4}}},
+-- 		{key="J", mods="LEADER", action=act{AdjustPaneSize={"Down", 4}}},
+-- 		{key="K", mods="LEADER", action=act{AdjustPaneSize={"Up", 4}}},
+-- 		{key="L", mods="LEADER", action=act{AdjustPaneSize={"Right", 5}}},
+
+-- 		{key="`", mods="LEADER", action=act.ActivateLastTab},
+-- 		{key=" ", mods="LEADER", action=act.ActivateTabRelative(1)},
+-- 		{key="1", mods="LEADER", action=act{ActivateTab=0}},
+-- 		{key="2", mods="LEADER", action=act{ActivateTab=1}},
+-- 		{key="3", mods="LEADER", action=act{ActivateTab=2}},
+-- 		{key="4", mods="LEADER", action=act{ActivateTab=3}},
+-- 		{key="5", mods="LEADER", action=act{ActivateTab=4}},
+-- 		{key="6", mods="LEADER", action=act{ActivateTab=5}},
+-- 		{key="7", mods="LEADER", action=act{ActivateTab=6}},
+-- 		{key="8", mods="LEADER", action=act{ActivateTab=7}},
+-- 		{key="9", mods="LEADER", action=act{ActivateTab=8}},
+-- 		{key="x", mods="LEADER", action=act{CloseCurrentPane={confirm=true}}},
 --     -- { mods = "LEADER|CTRL", key = "a", action = wezterm.action.ActivateLastPane },
---     -- { mods = "LEADER", key = "d", action = wezterm.action.DetachPane },
+--     -- { mods = "LEADER", key = "d", action = act.DetachDomain 'CurrentPaneDomain'},
 --     { mods = 'LEADER', key = 'z', action = wezterm.action.TogglePaneZoomState },
 --     -- rotate panes
 --     { mods = "LEADER", key = "Space", action = wezterm.action.RotatePanes "Clockwise" },
