@@ -275,44 +275,45 @@ let g:slime_dont_ask_default = 1
 "------------------------------------------------------------------------------
 " ipython-cell configuration
 "------------------------------------------------------------------------------
-" Use '# %%' to define cells
-let g:ipython_cell_delimit_cells_by = 'tags'
-let g:ipython_cell_tag = "# %%"
-
-" default slime mapping but only for python
-autocmd FileType python xmap <c-c><c-c> <Plug>SlimeRegionSend
-autocmd FileType python nmap <c-c><c-c> <Plug>SlimeParagraphSend
-autocmd FileType python nmap <c-c>v <Plug>SlimeConfig
-
-" map <F9> to send the current line or current selection to IPython
-autocmd FileType python xmap <F9> <Plug>SlimeRegionSend
-autocmd FileType python nmap <F9> <Plug>SlimeParagraphSend
-
-" map <F5> to save and run script
-autocmd FileType python nnoremap <F5> :w<CR>:IPythonCellRun<CR>
-autocmd FileType python inoremap <F5> <C-o>:w<CR><C-o>:IPythonCellRun<CR>
-
-" map <F6> to evaluate current cell without saving
-autocmd FileType python nnoremap <F6> :IPythonCellExecuteCell<CR>
-autocmd FileType python inoremap <F6> <C-o>:IPythonCellExecuteCell<CR>
-
-" map <F7> to evaluate current cell and jump to next one without saving
-autocmd FileType python nnoremap <F7> :IPythonCellExecuteCellJump<CR>
-autocmd FileType python inoremap <F7> <C-o>:IPythonCellExecuteCellJump<CR>
-
-" map [c and ]c to jump to the previous and next cell header
-autocmd FileType python nnoremap [c :IPythonCellPrevCell<CR>
-autocmd FileType python nnoremap ]c :IPythonCellNextCell<CR>
-
-" map <Ctrl+Enter> to evaluate current cell without saving
-autocmd FileType python nnoremap  :IPythonCellExecuteCell<CR>
-" autocmd FileType python inoremap  <C-o>:IPythonCellExecuteCell<CR>
-
-" map <Shitf+Enter> to evaluate current cell and jump to next one without saving
-autocmd FileType python nnoremap OM :IPythonCellExecuteCellJump<CR>
-autocmd FileType python inoremap OM <C-o>:IPythonCellExecuteCellJump<CR>
-
-" map Ctrl+Up and Ctrl+Down
-autocmd FileType python nnoremap [1;5A :IPythonCellPrevCell<CR>
-autocmd FileType python nnoremap [1;5B :IPythonCellNextCell<CR>
-
+" " Use '# %%' to define cells
+" let g:ipython_cell_delimit_cells_by = 'tags'
+" let g:ipython_cell_tag = "# %%"
+"
+" " default slime mapping but only for python
+" autocmd FileType python xmap <c-c><c-c> <Plug>SlimeRegionSend
+" autocmd FileType python nmap <c-c><c-c> <Plug>SlimeParagraphSend
+" autocmd FileType python nmap <c-c>v <Plug>SlimeConfig
+"
+" " map <F9> to send the current line or current selection to IPython
+" autocmd FileType python xmap <F9> <Plug>SlimeRegionSend
+" autocmd FileType python nmap <F9> <Plug>SlimeParagraphSend
+"
+" " map <F5> to save and run script
+" autocmd FileType python nnoremap <F5> :w<CR>:IPythonCellRun<CR>
+" autocmd FileType python inoremap <F5> <C-o>:w<CR><C-o>:IPythonCellRun<CR>
+"
+" " map <F6> to evaluate current cell without saving
+" autocmd FileType python nnoremap <F6> :IPythonCellExecuteCell<CR>
+" autocmd FileType python inoremap <F6> <C-o>:IPythonCellExecuteCell<CR>
+"
+" " map <F7> to evaluate current cell and jump to next one without saving
+" autocmd FileType python nnoremap <F7> :IPythonCellExecuteCellJump<CR>
+" autocmd FileType python inoremap <F7> <C-o>:IPythonCellExecuteCellJump<CR>
+"
+" " map [c and ]c to jump to the previous and next cell header
+" autocmd FileType python nnoremap [c :IPythonCellPrevCell<CR>
+" autocmd FileType python nnoremap ]c :IPythonCellNextCell<CR>
+"
+" " map <Ctrl+Enter> to evaluate current cell without saving
+" autocmd FileType python nnoremap
+"  :IPythonCellExecuteCell<CR>
+" " autocmd FileType python inoremap
+"  <C-o>:IPythonCellExecuteCell<CR>
+"
+" " map <Shitf+Enter> to evaluate current cell and jump to next one without saving
+" autocmd FileType python nnoremap OM :IPythonCellExecuteCellJump<CR>
+" autocmd FileType python inoremap OM <C-o>:IPythonCellExecuteCellJump<CR>
+"
+" " map Ctrl+Up and Ctrl+Down
+" autocmd FileType python nnoremap [1;5A :IPythonCellPrevCell<CR>
+" autocmd FileType python nnoremap [1;5B :IPythonCellNextCell<CR>
