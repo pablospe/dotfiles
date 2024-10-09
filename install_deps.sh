@@ -10,6 +10,7 @@ sudo apt-get install -y \
   chafa \
   curl \
   dfc \
+  dolphin-plugins \
   exa \
   exiftool \
   fasd \
