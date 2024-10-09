@@ -36,19 +36,25 @@ config.scrollback_lines = 1000000
 -- Define key bindings
 local act = wezterm.action
 config.keys = {
+  -- Next/Previous window.
   {key="j", mods="ALT", action=act.ActivateTabRelative(-1)},
   {key="k", mods="ALT", action=act.ActivateTabRelative(1)},
 
+  -- New window.
   {key="n", mods="CTRL|ALT", action=act.SpawnTab("CurrentPaneDomain")},
 
+  -- Split windows.
 	{key = "\\", mods = "SUPER | CTRL", action=act.SplitPane({ direction = "Right" })},
-	{key = "Enter", mods = "SUPER | CTRL", action=act.SplitPane({ direction = "Down" })},
+	{key = "-", mods = "SUPER | CTRL", action=act.SplitPane({ direction = "Down" })},
 
-  { key = "k", mods = "SUPER | SHIFT", action = act.ScrollToPrompt(-1) },
-	{ key = "j", mods = "SUPER | SHIFT", action = act.ScrollToPrompt(1) },
-
+  -- Scroll one line.
   { key = 'UpArrow', mods = 'SHIFT', action = act.ScrollByLine(-1) },
   { key = 'DownArrow', mods = 'SHIFT', action = act.ScrollByLine(1) },
+
+  -- Allows scrolling to the start of a Prompt zone, it convenient to skip over
+  -- large amounts of output. It needs OSC integration.
+  { key = 'UpArrow', mods = 'SHIFT | CTRL', action = act.ScrollToPrompt(-1) },
+  { key = 'DownArrow', mods = 'SHIFT | CTRL', action = act.ScrollToPrompt(1) },
 
   { key = 'p', mods = 'CTRL | SHIFT', action = wezterm.action.ShowLauncher },
 
