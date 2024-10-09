@@ -37,15 +37,15 @@ config.scrollback_lines = 1000000
 local act = wezterm.action
 config.keys = {
   -- Next/Previous window.
-  {key="j", mods="ALT", action=act.ActivateTabRelative(-1)},
-  {key="k", mods="ALT", action=act.ActivateTabRelative(1)},
+  { key="j", mods="ALT", action=act.ActivateTabRelative(-1) },
+  { key="k", mods="ALT", action=act.ActivateTabRelative(1) },
 
   -- New window.
-  {key="n", mods="CTRL|ALT", action=act.SpawnTab("CurrentPaneDomain")},
+  { key="n", mods="CTRL|ALT", action=act.SpawnTab("CurrentPaneDomain") },
 
   -- Split windows.
-	{key = "\\", mods = "SUPER | CTRL", action=act.SplitPane({ direction = "Right" })},
-	{key = "-", mods = "SUPER | CTRL", action=act.SplitPane({ direction = "Down" })},
+  { key = "\\", mods = "SUPER | CTRL", action=act.SplitPane({ direction = "Right" }) },
+  { key = "-", mods = "SUPER | CTRL", action=act.SplitPane({ direction = "Down" }) },
 
   -- Scroll one line.
   { key = 'UpArrow', mods = 'SHIFT', action = act.ScrollByLine(-1) },
