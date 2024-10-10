@@ -63,6 +63,7 @@ config.keys = {
 
   -- {key="LeftArrow", mods="CTRL+SHIFT", action=wezterm.action.DisableDefaultAssignment},
   -- {key="RightArrow", mods="CTRL+SHIFT", action=wezterm.action.DisableDefaultAssignment},
+  { key = 'Enter', mods = 'ALT', action = wezterm.action.DisableDefaultAssignment },
 }
 
 for i = 1, 9 do
@@ -138,5 +139,14 @@ end
 --     { mods = 'LEADER', key = '0', action = wezterm.action.PaneSelect { mode = 'SwapWithActive', }, }
 --   }
 -- end
+
+
+config.ssh_domains = {
+  {
+    name = "spe-desktop2",
+    remote_address = "spe-desktop2",
+    username = "pablo",
+  },
+}
 
 return config
